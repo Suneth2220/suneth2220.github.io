@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">
+        Suneth <span>Herath</span>
+      </a>
+
+      <i class="bx bx-menu" id="menu-icon"></i>
+
+      <nav class="navbar">
+        <a href="#home" onclick="event.preventDefault(); window.scrollTo({top:0, behavior:'smooth'});">Home</a>
+        <a href="#services">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" onclick="event.preventDefault();document.getElementById('home').scrollIntoView({behavior:'smooth'});">Contact</a>
+      </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+          <h1>Hi, I'm <span>Suneth</span></h1>
+          <h3>Web Developer</h3>
+          <p>
+            I am a passionate web developer with a knack for creating
+            user-friendly websites. Let's work together to bring your ideas to
+            life!
+          </p>
+
+          <div class="social-icons">
+            <a href="https://github.com/Suneth2220" target="_blank" rel="noopener">
+                <i class="bx bxl-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/suneth-herath/" target="_blank" rel="noopener">
+                <i class="bx bxl-linkedin-square"></i>
+            </a>
+            <a href="https://www.instagram.com/xu_.nee/" target="_blank" rel="noopener">
+                <i class="bx bxl-instagram-alt"></i>
+            </a>
+          </div>
+          <div class="btn-group">
+              <a href="#projects" class="btn hire-btn">View My Work</a>
+              <a href="mailto:suneth2220@gmail.com" class="btn contact-btn">Get In Touch</a>
+          </div>
+        </div>
+        <div class="home-img">
+          <img src="image.png" alt="Profile Image" />
+        </div>
+    </section>
+    <section id="contact" style="display:none"></section>
+
+    <section class="services" id="services">
+      <h2 class="heading">Building Experiences</h2>
+      <div class="services-container">
+        <div class="service-box">
+          <div class="service-info">
+            <i class="bx bxl-figma"></i>
+            <h4>UI / UX <br>Design</h4>
+            <p>
+              I specialize in crafting clean, user-friendly interfaces that elevate digital experiences. From wireframes to interactive prototypes, I ensure every design is aligned with both user behavior and business goals—creating products that are intuitive, accessible, and visually engaging.
+            </p>
+          </div>
+        </div>
+        <div class="service-box">
+          <div class="service-info">
+            <i class="bx bx-code"></i>
+            <h4>Frontend Development</h4>
+            <p>
+              I develop responsive and interactive web applications using technologies like HTML, CSS, JavaScript, and frameworks like React. I focus on clean, maintainable code and seamless user experiences across all devices and screen sizes.
+            </p>
+          </div>
+        </div>
+        <div class="service-box">
+          <div class="service-info">
+            <i class="bx bx-code-curly"></i>
+            <h4>Backend Development</h4>
+            <p>
+              I work on building and integrating RESTful APIs that connect front-end interfaces to powerful backend systems. With hands-on experience in Node.js, MongoDB, and MySQL.
+            </p>
+          </div>
+        </div>
+        <div class="service-box">
+          <div class="service-info">
+            <i class='bx bx-video'></i>
+            <h4>Content <br> Creation</h4>
+            <p>
+              I help content creators and marketing teams with engaging visuals-from branded graphics and decks to motion content and templates-designed to boost engagement, build brand identity, and inspire action.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <h2 class="heading">Projects</h2>
+      <div class="projects-box">
+        <div class="project-card">
+          <img src="travigo.png" alt="">
+          <h3>TraviGo</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+          </p>
+          <a class="btn" href="https://github.com/Suneth2220/TraviGo" target="_blank" rel="noopener">View Project</a>
+        </div>
+
+        <div class="project-card">
+          <img src="project2.png" alt="">
+          <h3>Evently</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+          </p>
+          <div class="btn">Review Project</div>
+        </div>
+
+        <div class="project-card">
+          <img src="flamelens.png" alt="">
+          <h3>Flamelens</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+          </p>
+          <a class="btn" href="https://flamelens.com/" target="_blank" rel="noopener">Review Project</a>
+        </div>
+
+        <div class="project-card">
+          <img src="binco.png" alt="">
+          <h3>BINCO</h3>
+          <p>
+            BINCO is a modern mobile banking app concept with a Figma-designed UI, focused on managing multi-currency wallets through a clean and intuitive interface.
+          </p>
+          <a class="btn" href="https://www.figma.com/design/TZeJj50eFuL821rwoj6eum/BINCO?node-id=0-1&t=6T8JIipzfh9Ii3Cy-1" target="_blank" rel="noopener">View Design</a>
+        </div>
+
+        <div class="project-card">
+          <img src="billbot.png" alt="">
+          <h3>Billbot</h3>
+          <p>
+            BillBot is a Kotlin-based Android app for budget and expense management, offering smart categorization, spending limits, and visual reports in a simple, user-friendly interface.
+          </p>
+          <a class="btn" href="https://github.com/Suneth2220/Billbot" target="_blank" rel="noopener">View Project</a>
+        </div>
+
+        <div class="project-card">
+          <img src="project6.png" alt="">
+          <h3>Project 1</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+          </p>
+          <div class="btn">Review Project</div>
+        </div>
+    </section>
+    <footer class="footer">
+      <div class="social-icons">
+        <a href="https://github.com/Suneth2220" target="_blank" rel="noopener">
+            <i class="bx bxl-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/suneth-herath/" target="_blank" rel="noopener">
+            <i class="bx bxl-linkedin-square"></i>
+        </a>
+        <a href="https://www.instagram.com/xu_.nee/" target="_blank" rel="noopener">
+            <i class="bx bxl-instagram-alt"></i>
+        </a>
+      </div>
+      <ul class="list">
+        <!-- Removed FAQ, Services, Projects links from footer -->
+      </ul>
+      <p class="copyright">
+        © 2025 Suneth. All rights reserved.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
