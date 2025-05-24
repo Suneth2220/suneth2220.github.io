@@ -13,25 +13,28 @@
       <a href="#" class="logo">
         Suneth<span>XU</span>
       </a>
-
-      <i class="bx bx-menu" id="menu-icon"></i>
-
-      <nav class="navbar">
+      <nav class="navbar" id="main-navbar">
         <a href="#home" onclick="event.preventDefault(); window.scrollTo({top:0, behavior:'smooth'});">Home</a>
         <a href="#services">Experiences</a>
         <a href="#projects">Projects</a>
         <a href="#contact" onclick="event.preventDefault();document.getElementById('home').scrollIntoView({behavior:'smooth'});">Contact</a>
       </nav>
+      <div class="header-right">
+        <div class="cv-toggle-btn" id="toggle-view-icon">
+          <i class="bx bxs-file"></i>
+        </div>
+        <i class="bx bx-menu" id="menu-icon"></i>
+      </div>
     </header>
 
-    <section class="home" id="home">
+    <div id="original-view">
+      <section class="home" id="home">
         <div class="home-content">
           <h1>Hi, I'm <span>Suneth</span></h1>
           <h3>Building Innovative Web & AI Solutions</h3>
           <p>
             I’m passionate about leveraging cutting-edge technologies to create impactful digital solutions. I blend creativity with technical expertise to deliver projects that are not only functional but also intuitive and future-ready. Always eager to explore new challenges and push the boundaries.
           </p>
-
           <div class="social-icons">
             <a href="https://github.com/Suneth2220" target="_blank" rel="noopener">
                 <i class="bx bxl-github"></i>
@@ -51,134 +54,188 @@
         <div class="home-img">
           <img src="image.png" alt="Profile Image" />
         </div>
-    </section>
-    <section id="contact" style="display:none"></section>
-
-    <section class="services" id="services">
-      <h2 class="heading">Building Experiences</h2>
-      <div class="services-container">
-        <div class="service-box">
-          <div class="service-info">
-            <i class="bx bxl-figma"></i>
-            <h4>UI / UX <br>Design</h4>
-            <p>
-              I specialize in crafting clean, user-friendly interfaces that elevate digital experiences. From wireframes to interactive prototypes, I ensure every design is aligned with both user behavior and business goals—creating products that are intuitive, accessible, and visually engaging.
-            </p>
+      </section>
+      <section id="contact" style="display:none"></section>
+      <section class="services" id="services">
+        <h2 class="heading">Building Experiences</h2>
+        <div class="services-container">
+          <div class="service-box">
+            <div class="service-info">
+              <i class="bx bxl-figma"></i>
+              <h4>UI / UX <br>Design</h4>
+              <p>
+                I specialize in crafting clean, user-friendly interfaces that elevate digital experiences. From wireframes to interactive prototypes, I ensure every design is aligned with both user behavior and business goals—creating products that are intuitive, accessible, and visually engaging.
+              </p>
+            </div>
+          </div>
+          <div class="service-box">
+            <div class="service-info">
+              <i class="bx bx-code"></i>
+              <h4>Frontend Development</h4>
+              <p>
+                I develop responsive and interactive web applications using technologies like HTML, CSS, JavaScript, and frameworks like React. I focus on clean, maintainable code and seamless user experiences across all devices and screen sizes.
+              </p>
+            </div>
+          </div>
+          <div class="service-box">
+            <div class="service-info">
+              <i class="bx bx-code-curly"></i>
+              <h4>Backend Development</h4>
+              <p>
+                I work on building and integrating RESTful APIs that connect front-end interfaces to powerful backend systems. With hands-on experience in Node.js, MongoDB, and MySQL.
+              </p>
+            </div>
+          </div>
+          <div class="service-box">
+            <div class="service-info">
+              <i class='bx bx-video'></i>
+              <h4>Content <br>Creation</h4>
+              <p>
+                I help content creators and marketing teams with engaging visuals—from branded graphics and decks to motion content and templates—designed to boost engagement, build brand identity, and inspire action.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="service-box">
-          <div class="service-info">
-            <i class="bx bx-code"></i>
-            <h4>Frontend Development</h4>
+      </section>
+      <section class="projects" id="projects">
+        <h2 class="heading">Projects</h2>
+        <div class="projects-box">
+          <div class="project-card">
+            <img src="travigo.png" alt="">
+            <h3>TraviGo</h3>
             <p>
-              I develop responsive and interactive web applications using technologies like HTML, CSS, JavaScript, and frameworks like React. I focus on clean, maintainable code and seamless user experiences across all devices and screen sizes.
+              A full-stack web app using MongoDB, Express.js, React.js, and Node.js to streamline tour bookings, hotel reservations, and vehicle rentals in Sri Lanka, with features like user dashboards, admin workflows, and integrated payments.
             </p>
+            <a class="btn" href="https://github.com/Suneth2220/TraviGo" target="_blank" rel="noopener">View Project</a>
+          </div>
+          <div class="project-card">
+            <img src="billbot.png" alt="">
+            <h3>Billbot</h3>
+            <p>
+              BillBot is a Kotlin-based Android app for easy budget and expense management. It offers smart categorization, spending limits with alerts, and detailed visual reports. With a clean and intuitive interface, it helps users take control of their personal finances.
+            </p>
+            <a class="btn" href="https://github.com/Suneth2220/Billbot" target="_blank" rel="noopener">View Project</a>
+          </div>
+          <div class="project-card">
+            <img src="binco.png" alt="">
+            <h3>BINCO</h3>
+            <p>
+              BINCO is a Figma-designed mobile banking app concept that lets users manage multiple wallets across different currencies. It features a clean, intuitive interface focused on ease of use and seamless financial management, offering a modern digital banking experience.
+            </p>
+            <a class="btn" href="https://www.figma.com/design/TZeJj50eFuL821rwoj6eum/BINCO?node-id=0-1&t=6T8JIipzfh9Ii3Cy-1" target="_blank" rel="noopener">View Project</a>
           </div>
         </div>
-        <div class="service-box">
-          <div class="service-info">
-            <i class="bx bx-code-curly"></i>
-            <h4>Backend Development</h4>
-            <p>
-              I work on building and integrating RESTful APIs that connect front-end interfaces to powerful backend systems. With hands-on experience in Node.js, MongoDB, and MySQL.
-            </p>
+      </section>
+      <footer class="footer">
+        <div class="social-icons">
+          <a href="https://github.com/Suneth2220" target="_blank" rel="noopener">
+              <i class="bx bxl-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/suneth-herath/" target="_blank" rel="noopener">
+              <i class="bx bxl-linkedin-square"></i>
+          </a>
+          <a href="https://www.instagram.com/xu_.nee/" target="_blank" rel="noopener">
+              <i class="bx bxl-instagram-alt"></i>
+          </a>
+        </div>
+        <p class="copyright">
+          © 2025 Suneth. All rights reserved.
+        </p>
+      </footer>
+    </div>
+
+    <div id="minimal-view" style="display: none;">
+      <section class="cv-content">
+        <div class="cv-columns">
+          <div class="cv-left">
+            <div class="cv-home">
+              <img src="image.png" alt="Profile Image" class="cv-profile-img" />
+              <div class="cv-home-text">
+                <h1>Suneth Herath</h1>
+                <p class="cv-title">Web & AI Solutions Developer</p>
+                <p>Email: <a href="mailto:suneth2220@gmail.com" class="cv-link">suneth2220@gmail.com</a></p>
+              </div>
+            </div>
+            <h2>Experience</h2>
+            <div class="cv-entry">
+              <h3>Content Creator — Flamelens</h3>
+              <p class="cv-date">2025 – Present</p>
+            </div>
+            <div class="cv-entry">
+              <h3>Web Developer — WebWise Media</h3>
+              <p class="cv-date">2024 – 2025</p>
+            </div>
+            <h2>Projects</h2>
+            <div class="cv-entry">
+              <h3>TraviGO — Tourism platform (MERN)</h3>
+            </div>
+            <div class="cv-entry">
+              <h3>Billbot — Budget management app (Kotlin)</h3>
+            </div>
+            <div class="cv-entry">
+              <h3>BINCO — Mobile banking app (Figma)</h3>
+            </div>
+          </div>
+          <div class="cv-divider"></div>
+          <div class="cv-right">
+            <h2>Education</h2>
+            <div class="cv-entry">
+              <h3>BSc (Hons) Information Technology</h3>
+              <p>Sri Lanka Institute of Information Technology (SLIIT)</p>
+            </div>
+            <h2>Skills</h2>
+            <div class="cv-skills">
+              <ul>
+                <li>Web Development</li>
+                <li>UI/UX Design</li>
+                <li>MERN Stack</li>
+                <li>Video Editing</li>
+              </ul>
+            </div>
+            <h2>Links</h2>
+            <div class="cv-links">
+              <a href="https://github.com/Suneth2220" target="_blank" rel="noopener">
+                <i class="bx bxl-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/suneth-herath/" target="_blank" rel="noopener">
+                <i class="bx bxl-linkedin"></i>
+              </a>
+              <a href="https://www.instagram.com/xu_.nee/" target="_blank" rel="noopener">
+                <i class="bx bxl-instagram"></i>
+              </a>
+            </div>
           </div>
         </div>
-        <div class="service-box">
-          <div class="service-info">
-            <i class='bx bx-video'></i>
-            <h4>Content <br> Creation</h4>
-            <p>
-              I help content creators and marketing teams with engaging visuals-from branded graphics and decks to motion content and templates-designed to boost engagement, build brand identity, and inspire action.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="projects" id="projects">
-      <h2 class="heading">Projects</h2>
-      <div class="projects-box">
-        <div class="project-card">
-          <img src="travigo.png" alt="">
-          <h3>TraviGo</h3>
-          <p>
-            A full-stack web app using MongoDB, Express.js, React.js, and Node.js to streamline tour bookings, hotel reservations, and vehicle rentals in Sri Lanka, with features like user dashboards, admin workflows, and integrated payments.
-          </p>
-          <a class="btn" href="https://github.com/Suneth2220/TraviGo" target="_blank" rel="noopener">View Project</a>
-        </div>
-
-        <div class="project-card">
-          <img src="billbot.png" alt="">
-          <h3>Billbot</h3>
-          <p>
-            BillBot is a Kotlin-based Android app for easy budget and expense management. It offers smart categorization, spending limits with alerts, and detailed visual reports. With a clean and intuitive interface, it helps users take control of their personal finances.
-          </p>
-          <a class="btn" href="https://github.com/Suneth2220/Billbot" target="_blank" rel="noopener">View Project</a>
-        </div>
-
-        <!--
-        <div class="project-card">
-          <img src="project2.png" alt="">
-          <h3>Evently</h3>
-          <p>
-            Lorem ipsum Developer
-          </p>
-          <div class="btn">View Project</div>
-        </div>
-        -->
-
-        <!--
-        <div class="project-card">
-          <img src="flamelens.png" alt="">
-          <h3>Flamelens</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-          </p>
-          <a class="btn" href="https://flamelens.com/" target="_blank" rel="noopener">View Project</a>
-        </div>
-        -->
-
-        <div class="project-card">
-          <img src="binco.png" alt="">
-          <h3>BINCO</h3>
-          <p>
-            BINCO is a Figma-designed mobile banking app concept that lets users manage multiple wallets across different currencies. It features a clean, intuitive interface focused on ease of use and seamless financial management, offering a modern digital banking experience.
-          </p>
-          <a class="btn" href="https://www.figma.com/design/TZeJj50eFuL821rwoj6eum/BINCO?node-id=0-1&t=6T8JIipzfh9Ii3Cy-1" target="_blank" rel="noopener">View Project</a>
-        </div>
-
-        <!--
-        <div class="project-card">
-          <img src="project6.png" alt="">
-          <h3>Project 1</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-          </p>
-          <div class="btn">View Project</div>
-        </div>
-        -->
-    </section>
-    <footer class="footer">
-      <div class="social-icons">
-        <a href="https://github.com/Suneth2220" target="_blank" rel="noopener">
-            <i class="bx bxl-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/suneth-herath/" target="_blank" rel="noopener">
-            <i class="bx bxl-linkedin-square"></i>
-        </a>
-        <a href="https://www.instagram.com/xu_.nee/" target="_blank" rel="noopener">
-            <i class="bx bxl-instagram-alt"></i>
-        </a>
-      </div>
-      <ul class="list">
-        <!-- Removed FAQ, Services, Projects links from footer -->
-      </ul>
-      <p class="copyright">
-        © 2025 Suneth. All rights reserved.
-      </p>
-    </footer>
+      </section>
+    </div>
 
     <script src="script.js"></script>
+    <script>
+// Hide navbar and menu icon in CV view
+document.addEventListener('DOMContentLoaded', function() {
+  const minimalView = document.getElementById('minimal-view');
+  const navbar = document.getElementById('main-navbar');
+  const menuIcon = document.getElementById('menu-icon');
+  const toggleViewIcon = document.getElementById('toggle-view-icon');
+
+  function updateNavVisibility() {
+    if (minimalView && minimalView.style.display !== 'none') {
+      if (navbar) navbar.style.display = 'none';
+      if (menuIcon) menuIcon.style.display = 'none';
+    } else {
+      if (navbar) navbar.style.display = '';
+      if (menuIcon) menuIcon.style.display = '';
+    }
+  }
+
+  // If you have a toggle function for CV/original view, call updateNavVisibility() inside it.
+  // Otherwise, observe display changes:
+  const observer = new MutationObserver(updateNavVisibility);
+  if (minimalView) {
+    observer.observe(minimalView, { attributes: true, attributeFilter: ['style'] });
+  }
+  updateNavVisibility();
+});
+</script>
   </body>
 </html>
