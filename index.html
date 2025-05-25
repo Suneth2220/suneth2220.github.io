@@ -228,6 +228,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
+  // Scroll to top when CV is shown or hidden
+  if (toggleViewIcon) {
+    toggleViewIcon.addEventListener('click', function() {
+      setTimeout(function() {
+        window.scrollTo({ top: 0, behavior: 'auto' });
+      }, 10);
+    });
+  }
+
   // If you have a toggle function for CV/original view, call updateNavVisibility() inside it.
   // Otherwise, observe display changes:
   const observer = new MutationObserver(updateNavVisibility);
