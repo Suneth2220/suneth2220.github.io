@@ -433,14 +433,13 @@ section {
   height: 420px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 0 18px 6px rgba(124, 158, 249, 0.5);
   background: radial-gradient(circle, #B3C6FF 60%, #5A7AFA 100%);
   transition: 0.4s ease-in-out, box-shadow 0.4s;
   display: block;
 }
 
 .home-img img:hover {
-  box-shadow: 0 0 100px 30px #A3BFFA;
+  transform: scale(1.05);
 }
 
 .home-content h1 {
