@@ -872,7 +872,7 @@ section {
 .projects-box {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  place-items: center;
+  align-items: stretch;
   gap: 2rem;
   row-gap: 3rem;
   margin: 0 auto;
@@ -897,6 +897,7 @@ section {
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   min-width: 340px;
   max-width: 400px;
+  height: 100%;
   transform-style: preserve-3d;
   position: relative;
   backdrop-filter: blur(10px);
@@ -954,6 +955,7 @@ section {
   color: var(--text-secondary);
   margin-bottom: 2rem;
   line-height: 1.6;
+  flex-grow: 1;
 }
 
 .project-card .btn {
@@ -1235,6 +1237,16 @@ section {
     padding: 0.7rem 1.2rem;
     border-bottom: none;
     border-radius: 1.2rem;
+    color: var(--text-color);
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .navbar a:hover,
+  .navbar a.active {
+    color: var(--text-color);
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
   }
   .header-right {
     flex-direction: row;
@@ -1272,10 +1284,12 @@ section {
   .projects-box {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    align-items: stretch;
   }
   .project-card {
     min-width: unset;
     max-width: 95vw;
+    height: 100%;
   }
   .cv-columns {
     flex-direction: column;
@@ -1314,6 +1328,30 @@ section {
     border-image: var(--gradient-primary) 1;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   }
+  
+  .navbar a {
+    color: var(--text-color);
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .navbar a:hover,
+  .navbar a.active {
+    color: var(--text-color);
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  #minimal-view .navbar a {
+    color: var(--text-color);
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  #minimal-view .navbar a:hover,
+  #minimal-view .navbar a.active {
+    color: var(--text-color);
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
   .home {
     gap: 4rem;
     padding-top: 4rem;
@@ -1326,9 +1364,11 @@ section {
   .projects-box {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    align-items: stretch;
   }
   .project-card {
     padding: 1.5rem;
+    height: 100%;
   }
   .project-card img {
     max-width: 80vw;
