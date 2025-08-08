@@ -672,24 +672,42 @@ section {
 .btn.contact-btn::before {
   content: '';
   position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  border-radius: 2.5rem;
+}
+
+.btn.contact-btn::after {
+  content: '';
+  position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: left 0.5s ease;
+  z-index: 1;
+}
+
+.btn.contact-btn:hover::before {
+  opacity: 1;
+}
+
+.btn.contact-btn:hover::after {
+  left: 100%;
 }
 
 .btn.contact-btn:hover {
-  background: var(--gradient-primary);
   color: var(--text-color);
   border-color: transparent;
   box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
   transform: translateY(-2px) scale(1.05);
-}
-
-.btn.contact-btn:hover::before {
-  left: 100%;
 }
 
 .heading {
@@ -854,7 +872,7 @@ section {
 .projects-box {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  place-items: center;
+  align-items: stretch;
   gap: 2rem;
   row-gap: 3rem;
   margin: 0 auto;
@@ -879,6 +897,7 @@ section {
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   min-width: 340px;
   max-width: 400px;
+  height: 100%;
   transform-style: preserve-3d;
   position: relative;
   backdrop-filter: blur(10px);
@@ -936,6 +955,7 @@ section {
   color: var(--text-secondary);
   margin-bottom: 2rem;
   line-height: 1.6;
+  flex-grow: 1;
 }
 
 .project-card .btn {
@@ -1233,31 +1253,29 @@ section {
 
 @media (max-width: 1024px) {
   .home {
-    flex-direction: column-reverse;
-    gap: 5rem;
-    padding-top: 5rem;
+    gap: 6rem;
+    padding-top: 6rem;
   }
   .home-content {
-    align-items: center;
-    text-align: center;
-    max-width: 100%;
+    gap: 2rem;
   }
   .home-img img {
-    width: 56vw;
-    height: auto;
-    max-width: 350px;
+    width: 380px;
+    height: 380px;
   }
   .services-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 2rem;
   }
   .projects-box {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    align-items: stretch;
   }
   .project-card {
     min-width: unset;
     max-width: 95vw;
+    height: 100%;
   }
   .cv-columns {
     flex-direction: column;
@@ -1308,9 +1326,11 @@ section {
   .projects-box {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    align-items: stretch;
   }
   .project-card {
     padding: 1.5rem;
+    height: 100%;
   }
   .project-card img {
     max-width: 80vw;
