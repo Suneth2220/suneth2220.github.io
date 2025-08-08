@@ -34,6 +34,7 @@
 html {
   font-size: 60%;
   overflow-x: hidden;
+  color-scheme: dark;
 }
 
 body {
@@ -42,6 +43,15 @@ body {
   padding-top: 110px;
   min-height: 100vh;
   position: relative;
+  color-scheme: dark;
+  -webkit-color-scheme: dark;
+}
+
+/* iOS Safari specific */
+@supports (-webkit-touch-callout: none) {
+  body {
+    -webkit-appearance: none;
+  }
 }
 
 body::before {
@@ -1237,16 +1247,6 @@ section {
     padding: 0.7rem 1.2rem;
     border-bottom: none;
     border-radius: 1.2rem;
-    color: var(--text-color);
-    background: rgba(255, 255, 255, 0.05);
-    transition: all 0.3s ease;
-  }
-  
-  .navbar a:hover,
-  .navbar a.active {
-    color: var(--text-color);
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateX(5px);
   }
   .header-right {
     flex-direction: row;
@@ -1328,30 +1328,6 @@ section {
     border-image: var(--gradient-primary) 1;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   }
-  
-  .navbar a {
-    color: var(--text-color);
-    background: rgba(255, 255, 255, 0.05);
-    transition: all 0.3s ease;
-  }
-  
-  .navbar a:hover,
-  .navbar a.active {
-    color: var(--text-color);
-    background: rgba(255, 255, 255, 0.1);
-  }
-  
-  #minimal-view .navbar a {
-    color: var(--text-color);
-    background: rgba(255, 255, 255, 0.05);
-  }
-  
-  #minimal-view .navbar a:hover,
-  #minimal-view .navbar a.active {
-    color: var(--text-color);
-    background: rgba(255, 255, 255, 0.1);
-  }
-  
   .home {
     gap: 4rem;
     padding-top: 4rem;
