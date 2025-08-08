@@ -1343,9 +1343,18 @@ section {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   }
   .home {
-    gap: 4rem;
-    padding-top: 4rem;
+    gap: 2.5rem;
+    padding-top: 2rem;
   }
+  
+  /* Make buttons visible immediately on mobile */
+  .btn-group,
+  .btn.hire-btn,
+  .btn.contact-btn {
+    opacity: 1 !important;
+    animation: none !important;
+  }
+  
   .home-img img {
     width: 70vw;
     max-width: 300px;
@@ -1424,6 +1433,19 @@ section {
   .home-content p {
     font-size: 1.3rem;
   }
+  .home {
+    gap: 2rem;
+    padding-top: 1.5rem;
+  }
+  
+  /* Make buttons visible immediately on small mobile */
+  .btn-group,
+  .btn.hire-btn,
+  .btn.contact-btn {
+    opacity: 1 !important;
+    animation: none !important;
+  }
+  
   .home-img img {
     width: 80vw;
     max-width: 250px;
