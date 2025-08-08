@@ -35,6 +35,7 @@ html {
   font-size: 60%;
   overflow-x: hidden;
   color-scheme: dark;
+  -webkit-color-scheme: dark;
 }
 
 body {
@@ -47,10 +48,23 @@ body {
   -webkit-color-scheme: dark;
 }
 
+/* Force dark mode for mobile browsers */
+@media (prefers-color-scheme: light) {
+  html, body {
+    color-scheme: dark !important;
+    -webkit-color-scheme: dark !important;
+  }
+}
+
 /* iOS Safari specific */
 @supports (-webkit-touch-callout: none) {
   body {
     -webkit-appearance: none;
+  }
+  
+  /* Force dark mode on iOS */
+  html, body {
+    -webkit-color-scheme: dark !important;
   }
 }
 
@@ -1339,12 +1353,38 @@ section {
   .services-container,
   .projects-box {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 2rem;
     align-items: stretch;
+  }
+  
+  /* Add moderate spacing for service boxes on mobile */
+  .service-box {
+    margin-bottom: 0.5rem;
+    padding: 2.2rem;
+  }
+  
+  /* Add moderate spacing for services section on mobile */
+  .services {
+    padding-bottom: 5rem;
+    padding-top: 10rem;
   }
   .project-card {
     padding: 1.5rem;
     height: 100%;
+  }
+  
+  /* Mobile-specific hover effects to prevent clashing */
+  .project-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    z-index: 10;
+  }
+  
+  .project-card:hover img {
+    transform: scale(1.02);
+  }
+  
+  .project-card .btn:hover {
+    transform: translateY(-1px) scale(1.03);
   }
   .project-card img {
     max-width: 80vw;
@@ -1401,11 +1441,37 @@ section {
   .service-info p {
     font-size: 1.2rem;
   }
+  
+  /* Add moderate spacing for service boxes on small mobile */
+  .service-box {
+    margin-bottom: 0.8rem;
+    padding: 2.1rem;
+  }
+  
+  /* Add moderate spacing for services section on small mobile */
+  .services {
+    padding-bottom: 4rem;
+    padding-top: 8rem;
+  }
   .project-card h3 {
     font-size: 2rem;
   }
   .project-card p {
     font-size: 1.2rem;
+  }
+  
+  /* Mobile-specific hover effects for small screens */
+  .project-card:hover {
+    transform: translateY(-2px) scale(1.01);
+    z-index: 10;
+  }
+  
+  .project-card:hover img {
+    transform: scale(1.01);
+  }
+  
+  .project-card .btn:hover {
+    transform: translateY(-1px) scale(1.02);
   }
   .contact form {
     padding: 1rem;
