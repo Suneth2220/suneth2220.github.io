@@ -48,6 +48,11 @@ body {
   -webkit-color-scheme: dark;
 }
 
+/* Reduce header offset when in CV (minimal) view */
+body.cv-active {
+  padding-top: 90px;
+}
+
 /* Force dark mode for mobile browsers */
 @media (prefers-color-scheme: light) {
   html, body {
@@ -344,7 +349,7 @@ span {
 #minimal-view {
   background: #000000 !important;
   color: var(--text-color);
-  padding: 1.5rem 10% 4rem 10%;
+  padding: 1.2rem 10% 4rem 10%;
   font-family: 'Gilroy', 'Inter', 'Roboto', sans-serif;
   font-size: 1.6rem;
   line-height: 1.6;
@@ -1322,6 +1327,13 @@ section {
   html {
     font-size: 55%;
   }
+  /* Tighter top spacing for CV view on mobile */
+  body.cv-active {
+    padding-top: 70px;
+  }
+  body.cv-active #minimal-view {
+    padding-top: 0.8rem;
+  }
   .header {
     padding: 1.5rem 5vw;
   }
@@ -1418,6 +1430,13 @@ section {
 }
 
 @media (max-width: 480px) {
+  /* Even tighter on small phones */
+  body.cv-active {
+    padding-top: 60px;
+  }
+  body.cv-active #minimal-view {
+    padding-top: 0.6rem;
+  }
   .header {
     padding: 1rem 3vw;
   }

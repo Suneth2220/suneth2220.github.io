@@ -51,11 +51,14 @@ document.addEventListener('DOMContentLoaded', () => {
       minimalView.style.display = 'block';
       toggleViewIcon.classList.add('active');
       menuIcon.style.display = 'none';
+      // Mark body as being in CV mode to allow CSS overrides
+      document.body.classList.add('cv-active');
     } else {
       originalView.style.display = 'block';
       minimalView.style.display = 'none';
       toggleViewIcon.classList.remove('active');
       menuIcon.style.display = window.innerWidth <= 1280 ? 'block' : 'none';
+      document.body.classList.remove('cv-active');
     }
   });
 
