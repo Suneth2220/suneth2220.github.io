@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Scroll to top when page loads/refreshes
+  window.scrollTo(0, 0);
+  
   const menuIcon = document.querySelector('#menu-icon');
   const navbar = document.querySelector('.navbar');
   const navLinks = document.querySelectorAll('.navbar a');
