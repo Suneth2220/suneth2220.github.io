@@ -65,11 +65,13 @@ body.cv-active {
 @supports (-webkit-touch-callout: none) {
   body {
     -webkit-appearance: none;
+    appearance: none;
   }
   
   /* Force dark mode on iOS */
   html, body {
     -webkit-color-scheme: dark !important;
+    color-scheme: dark !important;
   }
 }
 
@@ -772,7 +774,12 @@ section {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 
+    background 0.4s cubic-bezier(0.4,0,0.2,1),
+    box-shadow 0.4s cubic-bezier(0.4,0,0.2,1),
+    border-color 0.4s cubic-bezier(0.4,0,0.2,1),
+    transform 0.4s cubic-bezier(0.4,0,0.2,1),
+    color 0.3s cubic-bezier(0.4,0,0.2,1);
   border: 1px solid var(--border-color);
   min-height: 280px;
   cursor: pointer;
@@ -780,7 +787,8 @@ section {
   overflow: hidden;
   padding: 2rem;
   width: 100%;
-  backdrop-filter: blur(10px);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .service-box::before {
@@ -863,34 +871,40 @@ section {
 }
 
 .service-tag {
-  display: inline-block;
-  border: 1px solid var(--border-color);
-  color: #FFFFFF;
-  border-radius: 2rem;
-  padding: 0.6rem 1.4rem;
-  font-size: 1.2rem;
+  background: var(--card-hover);
+  color: var(--text-secondary);
   font-weight: 600;
-  background: rgba(99, 102, 241, 0.2);
-  transition: all 0.3s ease;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  isolation: isolate;
-  position: relative;
-  z-index: 1;
+  font-size: 1.25rem;
+  letter-spacing: 0.3px;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  padding: 0.6rem 1.6rem;
+  margin-bottom: 0.5rem;
+  box-shadow: none;
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  vertical-align: middle;
+  line-height: 1;
+  cursor: default;
+  -webkit-text-fill-color: currentColor;
+  background-clip: border-box;
 }
 
+/* On card hover, make tags use gradient background */
 .service-box:hover .service-tag {
-  border: 1px solid transparent;
-  background: var(--gradient-primary);
-  color: #FFFFFF;
+  background: var(--gradient-secondary);
+  color: var(--text-color);
+  border-color: transparent;
+  background-clip: padding-box;
+  box-shadow: 0 8px 20px var(--glow-color);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  isolation: isolate;
-  position: relative;
-  z-index: 1;
+}
+
+.service-tag::before {
+  content: none !important;
+  display: none !important;
 }
 
 .projects {
@@ -923,13 +937,19 @@ section {
   overflow: hidden;
   cursor: pointer;
   box-shadow: 0 8px 32px var(--shadow-color);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 
+    background 0.4s cubic-bezier(0.4,0,0.2,1),
+    box-shadow 0.4s cubic-bezier(0.4,0,0.2,1),
+    border-color 0.4s cubic-bezier(0.4,0,0.2,1),
+    transform 0.4s cubic-bezier(0.4,0,0.2,1),
+    color 0.3s cubic-bezier(0.4,0,0.2,1);
   min-width: 340px;
   max-width: 400px;
   height: 100%;
   transform-style: preserve-3d;
   position: relative;
-  backdrop-filter: blur(10px);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .project-card::before {
